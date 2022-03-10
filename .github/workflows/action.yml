@@ -64,6 +64,6 @@ jobs:
           cache-from: type=registry,ref=${{ secrets.DOCKER_HUB_USERNAME }}/docker-ci-test:buildcache
           cache-to: type=registry,ref=${{ secrets.DOCKER_HUB_USERNAME }}/docker-ci-test:buildcache,mode=max
           push: ${{ github.event_name != 'pull_request' }}
-          # tags: ${{ secrets.DOCKER_HUB_USERNAME }}/docker-ci-test:latest
-          tags: ${{ steps.meta.outputs.tags }}
+          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/docker-ci-test:latest
+          # tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
